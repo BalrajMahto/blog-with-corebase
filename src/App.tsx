@@ -14,6 +14,9 @@ function App() {
     navigate("/login")
     await signOut()
   }
+  const handleButtonClick = async ()=>{
+    navigate("/blog")
+  }
 
   return (
     <div className="min-h-screen w-full bg-muted/40 dark:bg-zinc-950">
@@ -29,6 +32,9 @@ function App() {
           <ModeToggle />
           <Button variant="ghost" onClick={handleLogout}>
             Logout
+          </Button>
+          <Button onClick={handleButtonClick}>
+             Go to blog
           </Button>
         </div>
       </header>
